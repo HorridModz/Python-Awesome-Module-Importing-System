@@ -36,7 +36,7 @@ def install_and_import(module):
         finally:
             if not(INSTALL_ERROR):
                 try:
-                    globals()[package] = importlib.import_module(module)
+                    globals()[module] = importlib.import_module(module)
                 except:
                     INSTALL_ERROR = True
                     print("\n\nFailed to install module '" + module + "' due to unknown reason. Check that you have an internet connection and that your disk is not full.")
@@ -45,15 +45,6 @@ def install_and_import(module):
 def importmodule(module,terminate = True):
     globals()[module + "imported"] = True
     try:
-        importlib.import_module(module)
+        globals()[module] = importlib.import_module(module)
     except ImportError:
         modulenotfounderror(module,terminate)
-        
-#Comment out these examples and try them one by one!
-        
-importmodule("io",True) #Import default module and terminate if install failed
-importmodule("io",False) #Import default module and warn if install failed
-importmodule("discord",True) #Import non-default module and terminate if install failed (change this to a non-default module you do not already have installed to test)
-importmodule("discord",False) #Import non-default module and terminate if install failed (change this to a non-default module you do not already have installed to test)
-importmodule("Modulethatdoesnotexist",True)  #Import nonexistent module and terminate if install failed (for testing purposes only)
-importmodule("Modulethatalsodoesnotexist",False) #Import nonexistent module and warn if install failed (for testing purposes only)
