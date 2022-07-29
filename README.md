@@ -14,6 +14,7 @@ A lightweight, simple way to import python modules with error-handling and auto-
 # Usage:
 1. Paste the code at the top of your program
 2. Use `importmodule("modulename")` to import modules
+
 Note that using this function will create variables so you can check if a module has been installed
 (EX: calling `importmodule("io")` will create a global variable `ioimported` with the value `True` or `False`)
 
