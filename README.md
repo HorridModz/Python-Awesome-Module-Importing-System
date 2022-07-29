@@ -12,7 +12,7 @@ A lightweight, simple way to import python modules with error-handling and auto-
 - Install once, use forever - once a module is successfully installed with this system, the module will be recognized the next time it is imported, whether will this system or with the default `import module` system
 
 # Usage:
-1. Paste the system at the top of your code
+1. Paste the code at the top of your program
 2. Use `importmodule("modulename")` to import modules
 Note that using this function will create variables so you can check if a module has been installed
 (EX: calling `importmodule("io")` will create a global variable `ioimported` with the value `True` or `False`)
