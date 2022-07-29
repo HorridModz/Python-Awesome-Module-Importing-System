@@ -1,4 +1,4 @@
-#   Modules required for importing modules
+#   Modules required for importing other modules
 
 import sys
 import warnings
